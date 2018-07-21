@@ -3,7 +3,6 @@ C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\ERP-RCP.exe
 C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\ERP-RCP.pdb
 C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP-RCP.csprojAssemblyReference.cache
 C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP_RCP.Properties.Resources.resources
-C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP_RCP.FrMenu.resources
 C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP-RCP.csproj.GenerateResource.cache
 C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP-RCP.csproj.CoreCompileInputs.cache
 C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP-RCP.exe
@@ -13,5 +12,12 @@ C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\MySql.Data.EntityFramework.dll
 C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\Google.Protobuf.dll
 C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\MySql.Data.xml
 C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\MySql.Data.EntityFramework.xml
-C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP_RCP.Telas.FrLogin.resources
 C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP-RCP.csproj.CopyComplete
+C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP_RCP.Telas.PM02.resources
+C:\ERP-RCP\ERP-RCP\ERP-RCP\obj\Debug\ERP_RCP.Telas.FrConsPessoa.resources
+C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\CamadaDados.dll
+C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\CamadaDados.pdb
+C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\CamadaApresentacao.dll
+C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\CamadaNegocio.dll
+C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\CamadaApresentacao.pdb
+C:\ERP-RCP\ERP-RCP\ERP-RCP\bin\Debug\CamadaNegocio.pdb

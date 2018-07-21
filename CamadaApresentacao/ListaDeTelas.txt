@@ -1,0 +1,11 @@
+﻿Lista de Telas (Transações)
+
+Telas do Sistema (uso geral):
+	LOG00: faz o login e libera o acesso ao sistema;
+	RCP00: tela principal que acessa as demais transações. Esta tela carrega as informações de usuário e empresa;
+
+Dados Básicos:
+	ATV00_Localiza: faz busca de atividades utilizado DATV01(CamadaNegocio);
+	ATV01: insere nova atividade no banco de dados;
+	ATV02: carrega e modifica dados de uma atividade existente;
+	ATV03: consulta dados de uma atividade existente. Esta tela herda os controles de ATV02;

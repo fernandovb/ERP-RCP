@@ -47,21 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CmDados\ClConexao.cs" />
-    <Compile Include="Telas\FrLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\FrLogin.Designer.cs">
-      <DependentUpon>FrLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\FrMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\FrMenu.Designer.cs">
-      <DependentUpon>FrMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\ClRetorno.cs" />
+    <Compile Include="Telas\FrConsPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\FrConsPessoa.Designer.cs">
+      <DependentUpon>FrConsPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\PM01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\PM01.Designer.cs">
+      <DependentUpon>PM01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\PM02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\PM02.Designer.cs">
+      <DependentUpon>PM02.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -71,11 +77,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Telas\FrLogin.resx">
-      <DependentUpon>FrLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\FrConsPessoa.resx">
+      <DependentUpon>FrConsPessoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\FrMenu.resx">
-      <DependentUpon>FrMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\PM02.resx">
+      <DependentUpon>PM02.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -90,6 +96,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CamadaApresentacao\CamadaApresentacao.csproj">
+      <Project>{da8fcfcb-7be1-4198-a9fa-e78d71ed1c50}</Project>
+      <Name>CamadaApresentacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamadaDados\CamadaDados.csproj">
+      <Project>{a93dc382-6063-4a72-8368-10cec826c52b}</Project>
+      <Name>CamadaDados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamadaNegocio\CamadaNegocio.csproj">
+      <Project>{983e0552-89fb-479c-9e2f-73e9f857cad8}</Project>
+      <Name>CamadaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

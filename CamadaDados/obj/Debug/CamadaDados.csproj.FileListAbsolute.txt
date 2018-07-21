@@ -1,0 +1,12 @@
+C:\ERP-RCP\ERP-RCP\CamadaDados\bin\Debug\CamadaDados.dll
+C:\ERP-RCP\ERP-RCP\CamadaDados\bin\Debug\CamadaDados.pdb
+C:\ERP-RCP\ERP-RCP\CamadaDados\bin\Debug\MySql.Data.dll
+C:\ERP-RCP\ERP-RCP\CamadaDados\bin\Debug\MySql.Data.EntityFramework.dll
+C:\ERP-RCP\ERP-RCP\CamadaDados\bin\Debug\Google.Protobuf.dll
+C:\ERP-RCP\ERP-RCP\CamadaDados\bin\Debug\MySql.Data.xml
+C:\ERP-RCP\ERP-RCP\CamadaDados\bin\Debug\MySql.Data.EntityFramework.xml
+C:\ERP-RCP\ERP-RCP\CamadaDados\obj\Debug\CamadaDados.csprojAssemblyReference.cache
+C:\ERP-RCP\ERP-RCP\CamadaDados\obj\Debug\CamadaDados.csproj.CoreCompileInputs.cache
+C:\ERP-RCP\ERP-RCP\CamadaDados\obj\Debug\CamadaDados.csproj.CopyComplete
+C:\ERP-RCP\ERP-RCP\CamadaDados\obj\Debug\CamadaDados.dll
+C:\ERP-RCP\ERP-RCP\CamadaDados\obj\Debug\CamadaDados.pdb
