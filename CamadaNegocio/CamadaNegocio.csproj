@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="CnConexao\NLOG00.cs" />
     <Compile Include="CnDBA\NATV01.cs" />
+    <Compile Include="NAUDDATA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

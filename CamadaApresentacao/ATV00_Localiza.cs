@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CamadaNegocio.CnDBA;
 
@@ -32,8 +25,9 @@ namespace CamadaApresentacao
             busca[1, 1] = TbDescricao.Text;
             try
             {
-                NATV01.LocalizarAtividade(busca);
-                DgResultado.DataSource = NATV01.DsLocalizar;
+                NATV01 Localizar = new NATV01(TbAtividade.Text);
+                Localizar.LocalizarAtividade(busca);
+                DgResultado.DataSource = Localizar.DsLocalizar;
                 DgResultado.DataMember = "dba_atividade";
                 BtConfirma.Enabled = true;
             }

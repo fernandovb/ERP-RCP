@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace CamadaDados.CdConexao
@@ -6,6 +7,7 @@ namespace CamadaDados.CdConexao
     public static class Conexao
     {
         public static MySqlConnection ERP_Conexao;
+        public static MySqlConnection LOG_Conexao;
 
         public static string Conectar(string server, string database, string user, string senha)
         {
@@ -16,11 +18,12 @@ namespace CamadaDados.CdConexao
                              "uid=" + user + ";" +
                              "pwd=" + senha;
             ERP_Conexao = new MySqlConnection(comando);
+            ConectarLogRCP(server, "log_rcp", user, senha);
             try
             {
-                ERP_Conexao.Open();
+                OpenDatabase();
                 mensagem = "Conexão bem sucedida!";
-                ERP_Conexao.Close();
+                CloseDatabase();
             }
             catch (Exception ex)
             {
@@ -29,12 +32,23 @@ namespace CamadaDados.CdConexao
             return mensagem;
         }
 
+        public static void ConectarLogRCP(string server, string database, string user, string senha)
+        {
+            string comando = "Persist Security Info=False;" +
+                             "server=" + server + ";" +
+                             "database=" + database + ";" +
+                             "uid=" + user + ";" +
+                             "pwd=" + senha;
+            LOG_Conexao = new MySqlConnection(comando);
+        }
+
         public static string Desconectar()
         {
             string mensagem = "";
             try
             {
                 ERP_Conexao.Close();
+                LOG_Conexao.Close();
                 mensagem = "BD desconectado.";
             }
             catch (Exception ex)
@@ -46,12 +60,13 @@ namespace CamadaDados.CdConexao
 
         public static bool OpenDatabase()
         {
-            try
-            {
+            if (ERP_Conexao.State == ConnectionState.Closed)
+            { 
                 ERP_Conexao.Open();
+                LOG_Conexao.Open();
                 return true;
             }
-            catch
+            else
             {
                 return false;
             }
@@ -59,12 +74,13 @@ namespace CamadaDados.CdConexao
 
         public static bool CloseDatabase()
         {
-            try
+            if (ERP_Conexao.State == ConnectionState.Open)
             {
                 ERP_Conexao.Close();
+                LOG_Conexao.Close();
                 return true;
             }
-            catch
+            else
             {
                 return false;
             }

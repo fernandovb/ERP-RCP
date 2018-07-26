@@ -68,6 +68,12 @@
     <Compile Include="ATV03.Designer.cs">
       <DependentUpon>ATV03.cs</DependentUpon>
     </Compile>
+    <Compile Include="AUDDATA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AUDDATA.Designer.cs">
+      <DependentUpon>AUDDATA.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClRetorno.cs" />
     <Compile Include="LOG00.cs">
       <SubType>Form</SubType>
@@ -112,6 +118,9 @@
     <EmbeddedResource Include="ATV03.resx">
       <DependentUpon>ATV03.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AUDDATA.resx">
+      <DependentUpon>AUDDATA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrLogin.resx">
       <DependentUpon>LOG00.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,11 +130,11 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Gravar.gif" />
-    <Content Include="ListaDeTelas.txt" />
+    <Content Include="Anotações\ListaDeTelas.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

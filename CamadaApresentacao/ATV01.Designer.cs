@@ -35,6 +35,8 @@
             this.BtGravar = new System.Windows.Forms.ToolStripButton();
             this.BtCancelar = new System.Windows.Forms.ToolStripButton();
             this.BtSair = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.BtAuditoria = new System.Windows.Forms.ToolStripButton();
             this.LbCodigo = new System.Windows.Forms.Label();
             this.TbCodigo = new System.Windows.Forms.MaskedTextBox();
             this.LbDescricao = new System.Windows.Forms.Label();
@@ -65,7 +67,9 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtGravar,
             this.BtCancelar,
-            this.BtSair});
+            this.BtSair,
+            this.toolStripSeparator1,
+            this.BtAuditoria});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(437, 25);
@@ -79,7 +83,7 @@
             this.BtGravar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtGravar.Name = "BtGravar";
             this.BtGravar.Size = new System.Drawing.Size(23, 22);
-            this.BtGravar.Text = "toolStripButton1";
+            this.BtGravar.Text = "Gravar Dados";
             this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
             // 
             // BtCancelar
@@ -89,7 +93,7 @@
             this.BtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtCancelar.Name = "BtCancelar";
             this.BtCancelar.Size = new System.Drawing.Size(23, 22);
-            this.BtCancelar.Text = "toolStripButton2";
+            this.BtCancelar.Text = "Cancelar Alterações";
             this.BtCancelar.Click += new System.EventHandler(this.BtCancelar_Click);
             // 
             // BtSair
@@ -99,8 +103,24 @@
             this.BtSair.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtSair.Name = "BtSair";
             this.BtSair.Size = new System.Drawing.Size(23, 22);
-            this.BtSair.Text = "toolStripButton3";
+            this.BtSair.Text = "Sair da Transação";
             this.BtSair.Click += new System.EventHandler(this.BtSair_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // BtAuditoria
+            // 
+            this.BtAuditoria.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtAuditoria.Image = ((System.Drawing.Image)(resources.GetObject("BtAuditoria.Image")));
+            this.BtAuditoria.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtAuditoria.Name = "BtAuditoria";
+            this.BtAuditoria.Size = new System.Drawing.Size(23, 22);
+            this.BtAuditoria.Tag = "Auditoria de dados";
+            this.BtAuditoria.Text = "Auditoria de Dados";
+            this.BtAuditoria.Click += new System.EventHandler(this.BtAuditoria_Click);
             // 
             // LbCodigo
             // 
@@ -131,6 +151,7 @@
             // 
             // TbDescricao
             // 
+            this.TbDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TbDescricao.Location = new System.Drawing.Point(100, 61);
             this.TbDescricao.Name = "TbDescricao";
             this.TbDescricao.Size = new System.Drawing.Size(322, 20);
@@ -196,5 +217,7 @@
         private System.Windows.Forms.TextBox TbDescricao;
         private System.Windows.Forms.TextBox TbObservacao;
         private System.Windows.Forms.Label LbObservacao;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton BtAuditoria;
     }
 }

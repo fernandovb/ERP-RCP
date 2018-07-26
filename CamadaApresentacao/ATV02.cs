@@ -31,14 +31,16 @@ namespace CamadaApresentacao
             int acao = 0;
             NATV01 a = new NATV01(TbAtividade.Text);
             SslMensagem.Text = a.CarregarAtividade(TbAtividade.Text);
-            if (this.Name == "ATV02")
-                acao = 2;
-            else if (this.Name == "ATV03")
-                acao = 3;
-            ATV01 FAlterar = new ATV01(3, a.codigo, a.descricao, a.observacao);
-            FAlterar.ShowDialog();
-            SslMensagem.Text = "";
-
+            if (SslMensagem.Text == "Dados carregados.")
+            {
+                if (this.Name == "ATV02")
+                    acao = 2;
+                else if (this.Name == "ATV03")
+                    acao = 3;
+                ATV01 FAlterar = new ATV01(acao, a.Codigo, a.Descricao, a.Observacao);
+                FAlterar.ShowDialog();
+                SslMensagem.Text = "";
+            }
         }
     }
 }

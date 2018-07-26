@@ -22,3 +22,4 @@ C:\ERP-RCP\ERP-RCP\CamadaApresentacao\bin\Debug\MySql.Data.EntityFramework.xml
 C:\ERP-RCP\ERP-RCP\CamadaApresentacao\obj\Debug\CamadaApresentacao.LOG00.resources
 C:\ERP-RCP\ERP-RCP\CamadaApresentacao\obj\Debug\CamadaApresentacao.RCP00.resources
 C:\ERP-RCP\ERP-RCP\CamadaApresentacao\obj\Debug\CamadaApresentacao.ATV03.resources
+C:\ERP-RCP\ERP-RCP\CamadaApresentacao\obj\Debug\CamadaApresentacao.AUDDATA.resources

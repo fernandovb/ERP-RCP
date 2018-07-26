@@ -1,42 +1,39 @@
-﻿using System;
-using System.Data;
-using MySql.Data.MySqlClient;
+﻿using System.Data;
 using CamadaDados.CdDBA;
+using CamadaDados;
 
 namespace CamadaNegocio.CnDBA
 {
-    public class NATV01 : IDisposable
+    public class NATV01
     {
-        bool disposed = false;
-        public string codigo { get; private set; }
-        public string descricao { get; private set; }
-        public string observacao { get; private set; }
+        public string Codigo { get; private set; }
+        public string Descricao { get; private set; }
+        public string Observacao { get; private set; }
         public object MaPesquisa { get; private set; }
-        public static DataSet DsLocalizar;
+        public DataSet DsLocalizar;
 
-        public NATV01(string codigo, string descricao, string observacao)
+        public NATV01(string Codigo, string Descricao, string Observacao)
         {
-            this.codigo = codigo;
-            this.descricao = descricao;
-            this.observacao = observacao;
+            this.Codigo = Codigo;
+            this.Descricao = Descricao;
+            this.Observacao = Observacao;
         }
 
         public NATV01(string codigo)
         {
-            this.codigo = codigo;
-            //CarregarAtividade();
+            this.Codigo = codigo;
         }
 
         public string InserirAtividade()
         {
             string mensagem = "";
-            if (codigo == "")
+            if (Codigo == "")
                 mensagem = "Código inválido! Favor verificar.";
-            else if (descricao == "")
+            else if (Descricao == "")
                 mensagem = "O campo Descrição necessita de um valor válido.";
             else
             {
-                DATV01 FInserir = new DATV01(codigo, descricao, observacao);
+                DATV01 FInserir = new DATV01(Codigo, Descricao, Observacao);
                 mensagem = FInserir.InserirAtividade();
             }
             return mensagem;
@@ -45,13 +42,13 @@ namespace CamadaNegocio.CnDBA
         public string AlterarAtividade()
         {
             string mensagem = "";
-            if (codigo == "")
+            if (Codigo == "")
                 mensagem = "Código inválido! Favor verificar.";
-            else if (descricao == "")
+            else if (Descricao == "")
                 mensagem = "O campo Descrição necessita de um valor válido.";
             else
             {
-                DATV01 d = new DATV01(codigo, descricao, observacao);
+                DATV01 d = new DATV01(Codigo, Descricao, Observacao);
                 mensagem = d.AlterarAtividade();
             }
             return mensagem;
@@ -62,12 +59,12 @@ namespace CamadaNegocio.CnDBA
             string mensagem = "Carga defeituosa!!!";
             DATV01 d = new DATV01(codigo);
             mensagem = d.CarregaAtividade(codigo);
-            descricao = d.descricao;
-            observacao = d.observacao;
+            Descricao = d.Descricao;
+            Observacao = d.Observacao;
             return mensagem;
         }
 
-        public static void LocalizarAtividade(string[,] criterio)
+        public void LocalizarAtividade(string[,] criterio)
         {
             string comando = ""; //Variável para inclusão do comando select do SQL
             string busca = ""; //Variável para montar critérios de busca SQL
@@ -88,25 +85,10 @@ namespace CamadaNegocio.CnDBA
             if (busca != "")
             {
                 comando = "SELECT atv_codigo, atv_descricao FROM dba_atividade WHERE " + busca;
-                DATV01.LocalizarAtividade(comando);
-                DATV01.MaPesquisa.Fill(DsLocalizar, "dba_atividade");
+                DATV01 Consulta = new DATV01(Codigo, Descricao, Observacao);
+                Consulta.LocalizarAtividade(comando);
+                Consulta.MaPesquisa.Fill(DsLocalizar, "dba_atividade");
             }
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (disposed)
-                return;
-            //if (disposing)
-            //{
-            //}
-            disposed = true;
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
         }
     }
 }
