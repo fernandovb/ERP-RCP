@@ -29,13 +29,14 @@ namespace CamadaApresentacao
 
         private void BtLogin_Click(object sender, EventArgs e)
         {
-            NLOG00 cn = new NLOG00(TbServer.Text, TbDatabase.Text, TbUser.Text, TbSenha.Text);
+            NLOG00 cn = new NLOG00(TbServer.Text, TbDatabase.Text, TbUser.Text, TbSenha.Text, int.Parse(TbEmpresa.Text));
             LbMensagem.Text = cn.AbrirBD();
             if (LbMensagem.Text == "Conexão bem sucedida!")
             {
                 this.DialogResult = DialogResult.OK;
                 this.usuario = TbUser.Text;
                 this.empresa = Convert.ToInt32(TbEmpresa.Text);
+                ClRetorno.EmpUso = int.Parse(TbEmpresa.Text);
             }
         }
 

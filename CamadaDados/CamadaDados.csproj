@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="CdConexao\Conexao.cs" />
     <Compile Include="CdDBA\DATV01.cs" />
+    <Compile Include="CdDBA\DGPE01.cs" />
+    <Compile Include="CdDBA\DSE01.cs" />
     <Compile Include="CdPRM\PRM_Pessoa.cs" />
     <Compile Include="DAUDATA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

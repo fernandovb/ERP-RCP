@@ -5,7 +5,6 @@
  * No seu lugar são feitos bloqueios no cadastro, desativando o acesso.
 */
 
-using System;
 using System.Data;
 using MySql.Data.MySqlClient;
 using CamadaDados.CdConexao;
@@ -142,17 +141,13 @@ namespace CamadaDados.CdDBA
                 Descricao = Carregar.Parameters["descricao"].Value.ToString();
                 Observacao = Carregar.Parameters["observacao"].Value.ToString();
                 if (Descricao != "")
-                {
                     mensagem = "Dados carregados.";
-                }
                 else
-                {
                     mensagem = "Erro ao carregar atividade. Verifique se existe."; //Se não, retornar mensagem de erro.
-                }
             }
             catch (MySqlException ex)
             {
-                mensagem = "Erro ao realizar alteração. " + ex.Message;
+                mensagem = "Erro ao carregar atividade. " + ex.Message;
             }
             finally
             {

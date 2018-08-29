@@ -30,19 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RCP00));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Favoritos");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("PM01 - Inclusão de Pessoas");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("PM02 - Alterar Pessoas");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("ATV01 - Incluir atividade");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("ATV02 - Modificar atividade");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("ATV03 - Consultar atividade");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Dados Básicos", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Menu RCP", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("ATV01 - Incluir atividade");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("ATV02 - Modificar atividade");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("ATV03 - Consultar atividade");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("GEP01 - Inserir empresa");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Dados Básicos", new System.Windows.Forms.TreeNode[] {
             treeNode2,
             treeNode3,
-            treeNode7});
+            treeNode4,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Menu RCP", new System.Windows.Forms.TreeNode[] {
+            treeNode6});
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.SslUser = new System.Windows.Forms.ToolStripStatusLabel();
@@ -243,30 +241,27 @@
             treeNode1.Name = "Favoritos";
             treeNode1.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             treeNode1.Text = "Favoritos";
-            treeNode2.Name = "Incluir Pessoas";
-            treeNode2.Tag = "PM01";
-            treeNode2.Text = "PM01 - Inclusão de Pessoas";
-            treeNode3.Name = "Alterar Pessoas";
-            treeNode3.Tag = "PM02";
-            treeNode3.Text = "PM02 - Alterar Pessoas";
-            treeNode4.Name = "Incluir atividade";
-            treeNode4.Tag = "ATV01";
-            treeNode4.Text = "ATV01 - Incluir atividade";
-            treeNode5.Name = "Modificar atividade";
-            treeNode5.Tag = "ATV02";
-            treeNode5.Text = "ATV02 - Modificar atividade";
-            treeNode6.Name = "Consultar atividade";
-            treeNode6.Tag = "ATV03";
-            treeNode6.Text = "ATV03 - Consultar atividade";
-            treeNode7.Name = "Dados Básicos";
-            treeNode7.Tag = "DBA";
-            treeNode7.Text = "Dados Básicos";
-            treeNode8.Name = "Menu RCP";
-            treeNode8.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode8.Text = "Menu RCP";
+            treeNode2.Name = "Incluir atividade";
+            treeNode2.Tag = "ATV01";
+            treeNode2.Text = "ATV01 - Incluir atividade";
+            treeNode3.Name = "Modificar atividade";
+            treeNode3.Tag = "ATV02";
+            treeNode3.Text = "ATV02 - Modificar atividade";
+            treeNode4.Name = "Consultar atividade";
+            treeNode4.Tag = "ATV03";
+            treeNode4.Text = "ATV03 - Consultar atividade";
+            treeNode5.Name = "Inserir empresa";
+            treeNode5.Tag = "GPE01";
+            treeNode5.Text = "GEP01 - Inserir empresa";
+            treeNode6.Name = "Dados Básicos";
+            treeNode6.Tag = "DBA";
+            treeNode6.Text = "Dados Básicos";
+            treeNode7.Name = "Menu RCP";
+            treeNode7.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode7.Text = "Menu RCP";
             this.TvMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
-            treeNode8});
+            treeNode7});
             this.TvMenu.ShowNodeToolTips = true;
             this.TvMenu.Size = new System.Drawing.Size(511, 310);
             this.TvMenu.TabIndex = 0;

@@ -9,7 +9,7 @@ namespace CamadaDados.CdConexao
         public static MySqlConnection ERP_Conexao;
         public static MySqlConnection LOG_Conexao;
 
-        public static string Conectar(string server, string database, string user, string senha)
+        public static string Conectar(string server, string database, string user, string senha, int empresa)
         {
             string mensagem = "";
             string comando = "Persist Security Info=False;" +
@@ -22,7 +22,11 @@ namespace CamadaDados.CdConexao
             try
             {
                 OpenDatabase();
-                mensagem = "Conexão bem sucedida!";
+                bool v = ValidarEmpresa(empresa) == true;
+                if (v)
+                    mensagem = "Conexão bem sucedida!";
+                else
+                    mensagem = "Empresa não indentificada. Verifique se o código está correto.";
                 CloseDatabase();
             }
             catch (Exception ex)
@@ -85,5 +89,33 @@ namespace CamadaDados.CdConexao
                 return false;
             }
         }
+
+        static bool ValidarEmpresa(int Codigo)
+        {
+            string Empresa = "";
+            try
+            {
+                MySqlCommand McValida = new MySqlCommand
+                {
+                    Connection = ERP_Conexao,
+                    CommandText = "sp_dba_empresa_validar"
+                };
+                McValida.CommandType = CommandType.StoredProcedure;
+                McValida.Parameters.AddWithValue("codigo", Codigo);
+                McValida.Parameters.AddWithValue("empresa", "@empresa");
+                McValida.Parameters["empresa"].Direction = ParameterDirection.Output;
+                McValida.ExecuteReader();
+                Empresa = McValida.Parameters["empresa"].Value.ToString();
+                if (int.Parse(Empresa) == Codigo)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

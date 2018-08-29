@@ -5,7 +5,16 @@ Telas do Sistema (uso geral):
 	RCP00: tela principal que acessa as demais transações. Esta tela carrega as informações de usuário e empresa;
 
 Dados Básicos:
+	*** ATV é abreviação de ATiVidade ***
 	ATV00_Localiza: faz busca de atividades utilizado DATV01(CamadaNegocio);
 	ATV01: insere nova atividade no banco de dados;
 	ATV02: carrega e modifica dados de uma atividade existente;
-	ATV03: consulta dados de uma atividade existente. Esta tela herda os controles de ATV02;
+	ATV03: visualiza dados de uma atividade existente. Esta tela herda os controles de ATV02.
+
+	*** GPE é abreviação de Gerenciador de Parâmetros de Empresa ***
+	GPE01: insere nova empresa que será controlada pelo sistema;
+	GPE02: carrega e modifica dados da empresa existente;
+	GPE03: visualiza dados da uma empresa existente.
+
+Sistema:
+	AUDDATA: faz a consulta das alterações ocorridas em um determinado registro;

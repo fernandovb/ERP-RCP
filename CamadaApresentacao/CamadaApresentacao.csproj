@@ -34,6 +34,7 @@
     <Reference Include="MySql.Data.EntityFramework, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -75,6 +76,12 @@
       <DependentUpon>AUDDATA.cs</DependentUpon>
     </Compile>
     <Compile Include="ClRetorno.cs" />
+    <Compile Include="GPE01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPE01.Designer.cs">
+      <DependentUpon>GPE01.cs</DependentUpon>
+    </Compile>
     <Compile Include="LOG00.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +100,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ClEnumSituacao.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CamadaDados\CamadaDados.csproj">
@@ -121,7 +129,10 @@
     <EmbeddedResource Include="AUDDATA.resx">
       <DependentUpon>AUDDATA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrLogin.resx">
+    <EmbeddedResource Include="GPE01.resx">
+      <DependentUpon>GPE01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOG00.resx">
       <DependentUpon>LOG00.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RCP00.resx">

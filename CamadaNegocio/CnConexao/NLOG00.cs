@@ -13,18 +13,20 @@ namespace CamadaNegocio.CnConexao
         public string Database { get; private set; }
         public string User { get; private set; }
         public string Senha { get; private set; }
+        public int Empresa { get; private set; }
 
-        public NLOG00(string Servidor, string Database, string User, string Senha)
+        public NLOG00(string Servidor, string Database, string User, string Senha, int Empresa)
         {
             this.Servidor = Servidor;
             this.Database = Database;
             this.User = User;
             this.Senha = Senha;
+            this.Empresa = Empresa;
         }
 
         public string AbrirBD()
         {
-            return Conexao.Conectar(Servidor, Database, User, Senha);
+            return Conexao.Conectar(Servidor, Database, User, Senha, Empresa);
         }
 
         public string FecharDB()

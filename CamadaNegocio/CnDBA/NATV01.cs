@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using CamadaDados.CdDBA;
-using CamadaDados;
 
 namespace CamadaNegocio.CnDBA
 {

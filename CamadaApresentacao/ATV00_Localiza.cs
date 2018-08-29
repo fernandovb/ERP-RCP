@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Formulário ATV00_Localiza: responsável pela interface para localização dados, 
+ * realizando consultas e auxiliando as transações ATV02 e ATV03 passando os parâmetros de carga,
+ */
+
+using System;
 using System.Windows.Forms;
 using CamadaNegocio.CnDBA;
 

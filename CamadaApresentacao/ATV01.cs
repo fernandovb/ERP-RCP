@@ -7,7 +7,6 @@
 using System;
 using System.Windows.Forms;
 using CamadaNegocio.CnDBA;
-using CamadaNegocio;
 
 namespace CamadaApresentacao
 {
